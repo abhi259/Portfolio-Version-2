@@ -1,0 +1,51 @@
+/* =Variables
+------------------------------------- */
+// Colors
+$pure-white: hsla(0, 0%, 100%, 1); // #fff
+$pure-black: hsla(0, 0%, 0%, 1); // #000
+$grey-dark: hsla(0, 0%, 25%, 1); // #404040
+$white-dark: hsla(0, 0%, 95%, 1); /// #f1f1f1
+$fuel-yellow: hsla(36, 100%, 49%, 1); // #f89500
+
+$white: hsla(0, 0%, 100%, 1);
+$charade: hsla(220, 13%, 18%, 1);
+$light-grey: hsla(0, 0%, 83%, 1);
+$fuel-yellow: hsla(39, 84%, 53%, 1);
+$red: hsla(0, 100%, 50%, 1);
+$jade: hsla(158, 100%, 34%, 1);
+$gable-green: hsla(180, 49%, 14%, 1);
+
+// Fonts
+$droid-serif: "Droid Serif", serif;
+$kalam: "Kalam", cursive;
+$open-sans: "Open Sans", sans-serif;
+
+// transition
+$transition: 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+$transition-fast: 0.2s cubic-bezier(0.77, 0, 0.175, 1);
+
+/* =Functions
+------------------------------------- */
+// Convert a pixel value to REM units
+@function rem($pixel) {
+  @return $pixel / 16 + rem;
+}
+
+/* =Styles
+------------------------------------- */
+
+.o-main {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+
+.c-rocket {
+  width: 100%;
+  position: absolute;
+}
+
+.c-rocket__flame {
+  transform-origin: 20% 20%;
+}

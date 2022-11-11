@@ -11,7 +11,7 @@ export default function ToggleButton({ darkMode, setDarkMode }) {
         id="darkmode-toggle"
         onClick={() => setDarkMode(!darkMode)}
       />
-      <label for="darkmode-toggle">
+      <label htmlFor="darkmode-toggle">
         <img src="sun-svgrepo-com.svg" alt="sun" className={sunColor} />
         <img src="moon-svgrepo-com.svg" alt="moon" className={moonColor} />
       </label>
