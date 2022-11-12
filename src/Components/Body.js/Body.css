@@ -1,14 +1,7 @@
 .custom-line {
-  height: 2px;
+  height: 0.5px;
+  opacity: 0.5;
   width: 100%;
-  /* background-color: rgb(218, 218, 218); */
-}
-@media not all and (max-width: 768px) {
-  .custom-line {
-    height: 0.5px;
-    opacity: 0.5;
-    width: 100%;
-  }
 }
 
 .Typewriter__wrapper {

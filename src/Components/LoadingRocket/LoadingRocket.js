@@ -3,9 +3,10 @@ import "./LoadingRocket.scss"
 import anime from "animejs/lib/anime.es.js"
 
 export default function LoadingRocket() {
-  const rocket = document.querySelector(".c-rocket")
-  let starSize
+  // const rocket = document.querySelector(".c-rocket")
+
   useEffect(() => {
+    let starSize
     const rocket = document.querySelector(".c-rocket")
     const flames = [...document.querySelectorAll(".c-rocket__flame")]
     const delay = 40
@@ -21,9 +22,13 @@ export default function LoadingRocket() {
       elapsed = now - then
 
       if (elapsed > delay) {
-        flames.map((flame) => {
-          flame.style.transform = `scale(${random(0.8, 1)}, ${random(0.8, 1)})`
-        })
+        flames.map(
+          (flame) =>
+            (flame.style.transform = `scale(${random(0.8, 1)}, ${random(
+              0.8,
+              1
+            )})`)
+        )
 
         then = Date.now()
       }

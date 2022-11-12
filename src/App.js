@@ -2,7 +2,6 @@ import { useState, useEffect } from "react"
 import "./App.css"
 import Body from "./Components/Body.js/Body"
 import LoadingRocket from "./Components/LoadingRocket/LoadingRocket"
-
 import Navbar from "./Components/Navbar/Navbar"
 
 function App() {
@@ -29,7 +28,7 @@ function App() {
       )}
       {!loading && (
         <div className={customStyle}>
-          <div className="  pt-7 h-auto transition duration-[1500ms] max-w-[900px] mx-auto p-5 md:p-20">
+          <div className="  pt-7 h-auto transition duration-[1500ms] max-w-[1000px] mx-auto p-5 md:p-20">
             <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
             <Body />
           </div>
