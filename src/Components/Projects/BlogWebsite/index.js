@@ -18,7 +18,7 @@ export default function BlogWebsite() {
           <div className=" md:w-[500px] relative">
             <div className="md:group-hover:-translate-x-14   dark:bg-[#05222a] bg-[#000000]  group-hover:bg-opacity-0  transition duration-700 ">
               <img
-                src="blogWebsite.png"
+                src="blogWebsite.svg"
                 alt="BlogWebsite"
                 className=" mix-blend-screen object-cover  h-72  "
               />
