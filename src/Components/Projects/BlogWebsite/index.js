@@ -16,25 +16,25 @@ export default function BlogWebsite() {
       <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
         <div className=" group  transition duration-700  ">
           <div className=" md:w-[500px] relative">
-            <div className="md:group-hover:-translate-x-14   dark:bg-[#05222a] bg-[#464646]  group-hover:bg-opacity-0  transition duration-700 ">
+            <div className="md:group-hover:-translate-x-14   dark:bg-[#05222a] bg-[#000000]  group-hover:bg-opacity-0  transition duration-700 ">
               <img
                 src="blogWebsite.png"
                 alt="BlogWebsite"
                 className=" mix-blend-screen object-cover  h-72  "
               />
             </div>
-            <div className=" absolute top-14 right-0 md:-right-52  w-[400px] bg-[#929292]/60 dark:bg-[#001C23]/70 h-44 backdrop-blur-lg flex flex-col justify-around p-5 md:group-hover:translate-x-20 transition duration-700">
+            <div className=" absolute top-14 right-0 md:-right-52  md:w-[400px]   bg-[#929292]/60 dark:bg-[#001C23]/70 h-48 backdrop-blur-lg flex flex-col justify-around p-5 md:group-hover:translate-x-20 transition duration-700">
               <div>
                 <h1 className="text-[#32ABB4] text-xl pb-2">
                   <span className="text-2xl text-[#c7c7c7]">01.</span>{" "}
                   Micro-Blogging Website
                 </h1>
-                <p className="text-[#9a9a9a]">
-                  A web app where anyone can post anything they want to with a
-                  title.
+                <p className="dark:text-[#828282] text-[#cccccc] ">
+                  A web app where anyone can post a micro-blog using Google
+                  Firebase Authentication.
                 </p>
               </div>
-              <div className="flex gap-8 text-sm text-[#4d7f8a]">
+              <div className="flex gap-8 text-sm text-[#609eac]">
                 <p>React</p>
                 <p>Tailwind</p>
                 <p>Firebase</p>
