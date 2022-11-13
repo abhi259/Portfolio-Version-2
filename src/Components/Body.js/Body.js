@@ -67,7 +67,7 @@ export default function Body() {
         </div>
       </div>
       <div className=" md:w-[700px] mx-auto ">
-        <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
+        <div data-aos="fade-right">
           <div>
             <div className="flex justify-start items-center   ">
               <h1 className="heading pr-4 text-3xl ">About</h1>
@@ -91,7 +91,7 @@ export default function Body() {
             </div>
           </div>
         </div>
-        <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
+        <div data-aos="fade-right">
           <div className="my-24">
             <div className="flex justify-start items-center my-10  ">
               <h1 className="heading pr-4 text-3xl">Skills</h1>

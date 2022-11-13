@@ -13,10 +13,10 @@ export default function BlogWebsite() {
       href="https://blogwebsite1.vercel.app/"
       rel="noopener noreferrer"
     >
-      <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
+      <div data-aos="fade-right">
         <div className=" group  transition duration-700  ">
           <div className=" md:w-[500px] relative">
-            <div className="md:group-hover:-translate-x-14   dark:bg-[#05222a] bg-[#000000]  group-hover:bg-opacity-0  transition duration-700 ">
+            <div className="md:group-hover:-translate-x-14   md:dark:bg-[#05222a] bg-[#000000]  group-hover:bg-opacity-0  transition duration-700 ">
               <img
                 src="https://firebasestorage.googleapis.com/v0/b/blog-website-2-a2fb4.appspot.com/o/BlogWebsite.png?alt=media&token=9f31e90c-d01b-4147-900a-e9be5d3d6039"
                 alt="BlogWebsite"
