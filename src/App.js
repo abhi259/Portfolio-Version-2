@@ -30,7 +30,7 @@ function App() {
         <div className={customStyle}>
           <div className="  pt-7 h-auto transition duration-[1500ms] max-w-[1000px] mx-auto p-5 md:p-20">
             <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
-            <Body />
+            <Body darkMode={darkMode} />
           </div>
         </div>
       )}

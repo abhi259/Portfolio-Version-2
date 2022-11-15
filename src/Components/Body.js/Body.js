@@ -1,22 +1,70 @@
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import "./Body.css"
 import { SiGithub, SiLinkedin, SiArtstation } from "react-icons/si"
 import Aos from "aos"
 import "aos/dist/aos.css"
 import Typewriter from "typewriter-effect"
 import BlogWebsite from "../Projects/BlogWebsite"
+import { motion } from "framer-motion"
 
-export default function Body() {
+export default function Body({ darkMode }) {
+  const [mousePosition, setMousePosition] = useState({
+    x: 0,
+    y: 0,
+  })
+  const [cursorVarient, setCursorVarient] = useState("default")
+
   useEffect(() => {
-    Aos.init({ duration: 1000 })
+    Aos.init({ duration: 1500 })
   }, [])
+
+  useEffect(() => {
+    const mouseMove = (event) => {
+      setMousePosition({
+        x: event.clientX,
+        y: event.clientY,
+      })
+    }
+
+    window.addEventListener("mousemove", mouseMove)
+
+    return () => {
+      window.removeEventListener("mousemove", mouseMove)
+    }
+  }, [])
+
+  const variants = {
+    default: {
+      x: mousePosition.x - 16,
+      y: mousePosition.y - 16,
+    },
+    text: {
+      height: 100,
+      width: 100,
+      x: mousePosition.x - 50,
+      y: mousePosition.y - 50,
+      backgroundColor: "white",
+      mixBlendMode: "difference",
+    },
+  }
+  const textEnter = () => setCursorVarient("text")
+  const textLeave = () => setCursorVarient("default")
 
   return (
     <div>
+      <motion.div
+        className="custom-cursor"
+        variants={variants}
+        animate={cursorVarient}
+      />
       <div className="flex justify-left mt-40 fonthello ">
         <div>
-          <h1 className="my-2 md:text-xl ">Hi! my name is </h1>
-          <div className="name  text-transparent bg-clip-text bg-gradient-to-b from-[#bababa] to-[#ffffff] dark:text-[#32abb4]  text-4xl md:text-5xl leading-4 transition duration-[1500ms] ">
+          <h1 className="my-2 md:text-xl ">Hi! my name is</h1>
+          <div
+            onMouseEnter={textEnter}
+            onMouseLeave={textLeave}
+            className="name  text-transparent bg-clip-text bg-gradient-to-b from-[#bababa] to-[#ffffff] dark:text-[#32abb4]  text-4xl md:text-5xl leading-4 transition duration-[1500ms] "
+          >
             <Typewriter
               options={{
                 cursor: "_",
@@ -37,13 +85,19 @@ export default function Body() {
       </div>
       <div className="mt-10 items-center text-5xl flex justify-center gap-6 pt-10 text-[#2e2e2e] dark:text-gray-300 transition duration-[1500ms]">
         <p className="custom-line bg-[#2e2e2e] dark:bg-gray-300 transition duration-[1500ms]"></p>
-        <a href="https://github.com/abhi259" target="_blank" rel="noreferrer">
+        <a
+          href="https://github.com/abhi259"
+          target="_blank"
+          rel="noreferrer"
+          className="hover:scale-150 transition duration-[300ms]"
+        >
           <SiGithub />
         </a>
         <a
           href="https://www.linkedin.com/in/abhishek-patil-900098158/"
           target="_blank"
           rel="noreferrer"
+          className="hover:scale-150 transition duration-[300ms]"
         >
           <SiLinkedin />
         </a>
@@ -52,6 +106,7 @@ export default function Body() {
           href="https://www.artstation.com/abhishekpatil925"
           target="_blank"
           rel="noreferrer"
+          className="hover:scale-150 transition duration-[300ms]"
         >
           <SiArtstation />
         </a>
@@ -73,7 +128,11 @@ export default function Body() {
               <h1 className="heading pr-4 text-3xl ">About</h1>
               <p className="custom-line bg-[#2e2e2e] dark:bg-gray-300 transition duration-[1500ms]"></p>
             </div>
-            <div className="text-sm   text-light my-5 md:pl-32 ">
+            <div
+              onMouseEnter={textEnter}
+              onMouseLeave={textLeave}
+              className="text-sm   text-light my-5 md:pl-32 "
+            >
               <p className="paragraph leading-[20px] ">
                 Hello! My name is Abhishek. I am a Front-End Web Developer and
                 3D Artist. My interest in web development started in early 2022

@@ -3,4 +3,16 @@
   font-weight: 700;
   line-height: 16px;
   letter-spacing: 0.095em;
+  cursor: none;
+}
+.custom-cursor {
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  pointer-events: none;
+  background-color: rgb(31, 181, 204);
 }
